@@ -1,0 +1,251 @@
+:root {
+    --color-main: #cb6731;
+    --color-primary: #4e2f24;
+    --color-secundary: #5a2724;
+
+    /* Navbar */
+    --navbar-color-primary: #1b1a1a;
+    --navbar-color-secundary: #2c1216;
+    --navbar-text-color: #d7d7d7;
+    --navbar-text-color-hover: var(--color-main);
+
+    /* Hero page */
+    --hero-bg-color: var(--color-primary);
+    --bg-img: url(../media/hero/background/roll-bg-b.webp);
+
+    /* Footer */
+    --footer-color-priamry: var(--navbar-color-primary);
+    --footer-color-secondary: #262525;
+
+    /* Icon color */
+    /* --primary-color: #10e0ac;
+    --secondary-color: #33bb99;
+    --border-color: #593123; */
+}
+
+:root {
+    --primary-color: #f28e73;
+    --secondary-color: #e06a10;
+    --border-color: #29221f;
+}
+
+.primary {
+    fill: var(--primary-color);
+}
+
+.secondary {
+    fill: var(--secondary-color);
+}
+
+.border {
+    fill: var(--border-color);
+}
+
+@media screen and (max-width: 640px) {
+    :root {
+        --bg-img: url(../media/hero/background/roll-bg-s.webp);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: black; /* Fondo negro para cuando una imagen de fondo no carge */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Google Sans Flex", sans-serif;
+    font-optical-sizing: auto;
+}
+
+ul {
+    list-style: none;
+    gap: .4rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #7b7b7b;
+}
+
+.spacing-wrapper {
+    max-width: clamp(1300px , 20vw - 650px, 1640px);
+    margin: 0 auto;
+}
+
+.section-wrapper {
+    padding: 5svh 10svw;
+}
+
+h2 {
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 2svh;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navbar */
+.navbar {
+    
+    position: fixed;
+    right: 0;
+    left: 0;
+
+    background: linear-gradient(var(--navbar-color-primary), var(--navbar-color-secundary));
+    z-index: 9999;
+}
+
+.navbar__wrapper {
+    display: flex;
+    justify-content: space-between;
+    color: var(--navbar-text-color);
+    padding: .5rem;
+}
+
+.navbar .right, .navbar .left {
+    display: inherit;
+    align-items: center;
+}
+
+.navbar a {
+    color: var(--navbar-text-color)
+}
+
+.navbar a:hover {
+    color: var(--navbar-text-color-hover)
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar img {
+    width: 2rem;
+    aspect-ratio: 1;
+}
+
+/* Hero page */
+#hero-page {
+    display: flex;
+    height: 100svh;
+    background-image: var(--bg-img);
+    background-size: cover;
+}
+
+.hero, .hero__wrapper, .text__container {
+    display: inherit;
+}
+
+.hero {
+    width: 100%;
+    padding-inline: 10%;
+    background: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    
+}
+
+.hero__wrapper {
+    display: inh;
+    width: 100%;
+    background: linear-gradient(var(--color-primary), var(--color-secundary));
+    flex-direction: column;
+}
+
+.img__container {
+    overflow: hidden;
+}
+
+.hero__wrapper .img__container {
+    overflow: hidden;
+    flex: 3;
+    mask: linear-gradient(to bottom, black, transparent);
+}
+
+.text__container {
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 8svw;
+    flex: 1;
+    color: #dfdbdb;
+    gap: 1rem;
+}
+
+#hero-page a {
+    padding: 1svw;
+    background-color: var(--color-main);
+}
+
+/* products */
+
+#products {
+    background-color: antiquewhite;
+}
+
+.product__list {
+    display: inline-flex;
+    gap: 2svw;
+    align-items: center;
+}
+
+.product__item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 50%;
+    text-align: center;
+    background: linear-gradient(#d7d7d7, #7b7b7b);
+    padding: 1svw;
+    border-radius: 10px;
+    
+}
+
+.product__item .img__container {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.product__item h3 {
+    font-size: 1rem;
+    height: 4svh;
+}
+
+ 
+
+/* Footer */
+#contact {
+    min-height: 20svh;
+    background: linear-gradient(var(--footer-color-priamry), var(--footer-color-secondary));
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 5svh 10svw;
+    color: aliceblue;
+    text-align: center;
+}
+
+#contact a {
+    color: aliceblue
+}
+#contact a:hover {
+    color: var(--color-main)
+}
+#contact h2 {
+    margin-top: 1rem;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panaderia Amayzo</title>
+
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="icon" type="image/svg" href="./src/media/favicon.svg">
+    <link rel="preload" as="image" href="./src/media/hero/background/roll-bg-s.webp">
+    <link rel="preload" as="image" href="./src/media/hero/background/roll-bg-b.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar__wrapper spacing-wrapper">
+                <div class="right">
+                    <img src="./src/media/favicon.svg" alt="Website icon">
+                </div>
+                <div class="left">
+                    <nav>
+                        <ul>
+                            <li><a href="#hero-page">Home</a></li>
+                            <li><a href="#products"><strong>Products</strong></a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="hero-page">
+            <div class="hero">
+                <div class="hero__wrapper">
+                    <div class="img__container">
+                        <picture>
+                            <source srcset="./src/media/hero/roll-s.webp" media="(max-width: 640px)">
+                            <source srcset="./src/media/hero/roll-b.webp">
+                            <img src="./src/media/hero/roll-b.webp" alt="Cannela rolls showcase image" loading="lazy">
+                        </picture>
+                    </div>
+
+                    <div class="text__container">
+                        <h1>The sweetest sweets you will ever find!</h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        
+
+        <section class="section-wrapper" id="products">
+            <div class="products spacing-wrapper">
+                <h2>Our Products</h2>
+
+                <div class="product__list">
+                    <article class="product__item">
+                        <h3>Expresso</h3>
+                        <div class="img__container">
+                            <img src="./src/media/products/card-espresso.jpg" alt="Expreso">
+                        </div>
+                        <p>$15.99</p>
+                    </article>
+                    <article class="product__item">
+                        <h3>Fresh bread</h3>
+                        <div class="img__container">
+                            <img src="./src/media/products/card-medialunas.jpg" alt="Bread">
+                        </div>
+                        <p>$15.99</p>
+                    </article>
+                    <article class="product__item">
+                        <h3>Tosts</h3>
+                        <div class="img__container">
+                            <img src="./src/media/products/card-tostado.jpg" alt="Tosts">
+                        </div>
+                        <p>$15.99</p>
+                    </article>
+                    <article class="product__item">
+                        <h3>Cappuccino</h3>
+                        <div class="img__container">
+                            <img src="./src/media/products/hero-cafe.jpg" alt="Expreso">
+                        </div>
+                        <p>$15.99</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contact">
+        <h2>Contacts</h2>
+        <ul>
+            <li>1243 Siempre Viva Avenue, Springfield</li>
+            <li>+54 11 (555) 2345-5278</li>
+            <li>contactamayzo@email.com</li>
+        </ul>
+
+
+        <h2>Socials</h2>
+        <ul>
+            <li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
+            <li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>
