@@ -11,7 +11,9 @@
 
     /* Hero page */
     --hero-bg-color: var(--color-primary);
-    --bg-img: url(../media/hero/background/roll-bg-b.webp);
+    --bg-img-mono: url(../media/hero/background/roll-bg-b.webp);
+    --bg-img: url(../media/hero/background/roll-b.webp);
+    /* --bg-img: red; */
 
     /* Footer */
     --footer-color-priamry: var(--navbar-color-primary);
@@ -41,9 +43,21 @@
     fill: var(--border-color);
 }
 
-@media screen and (max-width: 640px) {
+
+
+@media screen and (max-width: 1024px) {
     :root {
-        --bg-img: url(../media/hero/background/roll-bg-s.webp);
+        --bg-img-mono: url(../media/hero/background/roll-bg-m.webp);
+        --bg-img: url(../media/hero/background/roll-m.webp);
+        /* --bg-img: yellow; */
+    }
+}
+
+@media screen and (max-width: 512px) {
+    :root {
+        --bg-img-mono: url(../media/hero/background/roll-bg-s.webp);
+        --bg-img: url(../media/hero/background/roll-s.webp);
+        /* --bg-img: green; */
     }
 }
 
@@ -146,7 +160,8 @@ img {
 #hero-page {
     display: flex;
     height: 100svh;
-    background-image: var(--bg-img);
+    background-image: var(--bg-img-mono);
+    /* background: var(--bg-img); */
     background-size: cover;
 }
 
@@ -164,7 +179,7 @@ img {
 .hero__wrapper {
     display: inh;
     width: 100%;
-    background: linear-gradient(var(--color-primary), var(--color-secundary));
+    background-image: var(--bg-img);
     flex-direction: column;
 }
 
@@ -181,10 +196,21 @@ img {
 .text__container {
     flex-direction: column;
     overflow: hidden;
-    padding: 0 8svw;
-    flex: 1;
+    padding: calc(20% + clamp(1svh, 3svw + .5svh, 3svh) ) 8svw 0 8svw;
+    flex: 2;
     color: #dfdbdb;
     gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1rem, 3vw + 1rem, 3rem);
+    line-height: 1.1;
+    
+    background: linear-gradient(var(--color-primary), var(--color-secundary));
+    mask: linear-gradient(to top, black 50%, transparent 100%);
+}
+
+h1 {
+    font-size: inherit;
 }
 
 #hero-page a {

@@ -10,6 +10,16 @@
     <link rel="preload" as="image" href="./src/media/hero/background/roll-bg-s.webp">
     <link rel="preload" as="image" href="./src/media/hero/background/roll-bg-b.webp">
 
+    <!-- Preload the hero pages images -->
+    <link rel="preload" as="image" href="./src/media/hero/background/roll-bg-s.webp" media="(max-width: 512px)">
+    <link rel="preload" as="image" href="./src/media/hero/background/roll-bg-m.webp" media="(512px < width < 1024px)">
+    <link rel="preload" as="image" href="./src/media/hero/background/roll-bg-b.webp" media="(min-width: 1025px)">
+
+    <link rel="preload" as="image" href="./src/media/hero/background/roll-s.webp" media="(max-width: 512px)">
+    <link rel="preload" as="image" href="./src/media/hero/background/roll-m.webp" media="(512px < width < 1024px)">
+    <link rel="preload" as="image" href="./src/media/hero/background/roll-b.webp" media="(min-width: 1025px)">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -38,11 +48,11 @@
             <div class="hero">
                 <div class="hero__wrapper">
                     <div class="img__container">
-                        <picture>
-                            <source srcset="./src/media/hero/roll-s.webp" media="(max-width: 640px)">
+                        <!-- <picture>
+                            <source srcset="./src/media/hero/roll-s.webp" media="(800px <= width < 1280px)">
                             <source srcset="./src/media/hero/roll-b.webp">
                             <img src="./src/media/hero/roll-b.webp" alt="Cannela rolls showcase image" loading="lazy">
-                        </picture>
+                        </picture> -->
                     </div>
 
                     <div class="text__container">
